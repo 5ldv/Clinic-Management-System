@@ -145,7 +145,7 @@
             this.btnDashboard.ForeColor = System.Drawing.Color.White;
             this.btnDashboard.Image = global::UI.Properties.Resources.Dashboard;
             this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.Location = new System.Drawing.Point(7, 177);
+            this.btnDashboard.Location = new System.Drawing.Point(8, 177);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(259, 71);
             this.btnDashboard.TabIndex = 0;
@@ -161,7 +161,7 @@
             this.btnMedicalRecords.ForeColor = System.Drawing.Color.White;
             this.btnMedicalRecords.Image = global::UI.Properties.Resources.MedicalRecord;
             this.btnMedicalRecords.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMedicalRecords.Location = new System.Drawing.Point(7, 315);
+            this.btnMedicalRecords.Location = new System.Drawing.Point(8, 315);
             this.btnMedicalRecords.Name = "btnMedicalRecords";
             this.btnMedicalRecords.Size = new System.Drawing.Size(259, 71);
             this.btnMedicalRecords.TabIndex = 0;
@@ -177,7 +177,7 @@
             this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.Image = global::UI.Properties.Resources.Logout;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(7, 729);
+            this.btnLogout.Location = new System.Drawing.Point(8, 729);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(259, 71);
             this.btnLogout.TabIndex = 0;
@@ -193,7 +193,7 @@
             this.btnDoctors.ForeColor = System.Drawing.Color.White;
             this.btnDoctors.Image = global::UI.Properties.Resources.doctor;
             this.btnDoctors.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDoctors.Location = new System.Drawing.Point(7, 453);
+            this.btnDoctors.Location = new System.Drawing.Point(8, 453);
             this.btnDoctors.Name = "btnDoctors";
             this.btnDoctors.Size = new System.Drawing.Size(259, 71);
             this.btnDoctors.TabIndex = 0;
@@ -209,7 +209,7 @@
             this.btnAppointments.ForeColor = System.Drawing.Color.White;
             this.btnAppointments.Image = global::UI.Properties.Resources.Appointment;
             this.btnAppointments.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAppointments.Location = new System.Drawing.Point(7, 246);
+            this.btnAppointments.Location = new System.Drawing.Point(8, 246);
             this.btnAppointments.Name = "btnAppointments";
             this.btnAppointments.Size = new System.Drawing.Size(259, 71);
             this.btnAppointments.TabIndex = 0;
@@ -225,7 +225,7 @@
             this.btnEmployees.ForeColor = System.Drawing.Color.White;
             this.btnEmployees.Image = global::UI.Properties.Resources.Employee;
             this.btnEmployees.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmployees.Location = new System.Drawing.Point(7, 522);
+            this.btnEmployees.Location = new System.Drawing.Point(8, 522);
             this.btnEmployees.Name = "btnEmployees";
             this.btnEmployees.Size = new System.Drawing.Size(259, 71);
             this.btnEmployees.TabIndex = 0;
@@ -241,7 +241,7 @@
             this.btnDepartment.ForeColor = System.Drawing.Color.White;
             this.btnDepartment.Image = global::UI.Properties.Resources.Department;
             this.btnDepartment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDepartment.Location = new System.Drawing.Point(7, 591);
+            this.btnDepartment.Location = new System.Drawing.Point(8, 591);
             this.btnDepartment.Name = "btnDepartment";
             this.btnDepartment.Size = new System.Drawing.Size(259, 71);
             this.btnDepartment.TabIndex = 0;
@@ -257,7 +257,7 @@
             this.btnPatients.ForeColor = System.Drawing.Color.White;
             this.btnPatients.Image = global::UI.Properties.Resources.Patient;
             this.btnPatients.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPatients.Location = new System.Drawing.Point(7, 384);
+            this.btnPatients.Location = new System.Drawing.Point(8, 384);
             this.btnPatients.Name = "btnPatients";
             this.btnPatients.Size = new System.Drawing.Size(259, 71);
             this.btnPatients.TabIndex = 0;
@@ -273,7 +273,7 @@
             this.btnUsers.ForeColor = System.Drawing.Color.White;
             this.btnUsers.Image = global::UI.Properties.Resources.User;
             this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsers.Location = new System.Drawing.Point(7, 660);
+            this.btnUsers.Location = new System.Drawing.Point(8, 660);
             this.btnUsers.Name = "btnUsers";
             this.btnUsers.Size = new System.Drawing.Size(259, 71);
             this.btnUsers.TabIndex = 0;

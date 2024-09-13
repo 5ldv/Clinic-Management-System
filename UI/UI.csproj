@@ -116,5 +116,11 @@
   <ItemGroup>
     <None Include="Resources\Minimize.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Business\Business.csproj">
+      <Project>{ec82e18e-e4e2-4655-b852-e874fcd553b8}</Project>
+      <Name>Business</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
