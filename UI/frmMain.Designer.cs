@@ -247,6 +247,7 @@
             this.btnDepartment.TabIndex = 0;
             this.btnDepartment.Text = "DEPARTMENTS";
             this.btnDepartment.UseVisualStyleBackColor = false;
+            this.btnDepartment.Click += new System.EventHandler(this.btnDepartment_Click);
             // 
             // btnPatients
             // 

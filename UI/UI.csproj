@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Departments\frmAddEditDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Departments\frmAddEditDepartment.Designer.cs">
+      <DependentUpon>frmAddEditDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Departments\frmDepartmentsManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Departments\frmDepartmentsManagement.Designer.cs">
+      <DependentUpon>frmDepartmentsManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +66,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Departments\frmAddEditDepartment.resx">
+      <DependentUpon>frmAddEditDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Departments\frmDepartmentsManagement.resx">
+      <DependentUpon>frmDepartmentsManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +139,9 @@
       <Project>{ec82e18e-e4e2-4655-b852-e874fcd553b8}</Project>
       <Name>Business</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hashtag.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
