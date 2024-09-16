@@ -21,14 +21,14 @@ namespace ClinicManagement_DataAccess
                 connection.Open();
                 SqlDataReader reader = command.ExecuteReader();
 
-                if(reader.Read())
+                if (reader.Read())
                 {
                     isFound = true;
 
                     FirstName = (string)reader["FirstName"];
                     SecondName = (string)reader["SecondName"];
 
-                    if(reader["ThirdName"] != DBNull.Value)
+                    if (reader["ThirdName"] != DBNull.Value)
                         ThirdName = (string)reader["ThirdName"];
                     else
                         ThirdName = "";
@@ -38,7 +38,7 @@ namespace ClinicManagement_DataAccess
                     BirthDate = (DateTime)reader["BirthDate"];
                     Gender = (bool)reader["Gender"];
 
-                    if(reader["Address"] != DBNull.Value)
+                    if (reader["Address"] != DBNull.Value)
                         Address = (string)reader["Address"];
                     else
                         Address = "";
@@ -54,7 +54,7 @@ namespace ClinicManagement_DataAccess
 
                 reader.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 isFound = false;
             }
@@ -80,7 +80,7 @@ namespace ClinicManagement_DataAccess
             command.Parameters.AddWithValue("@FirstName", FirstName);
             command.Parameters.AddWithValue("@SecondName", SecondName);
 
-            if(ThirdName != "")
+            if (ThirdName != "")
                 command.Parameters.AddWithValue("@ThirdName", ThirdName);
             else
                 command.Parameters.AddWithValue("@ThirdName", DBNull.Value);
@@ -89,7 +89,7 @@ namespace ClinicManagement_DataAccess
             command.Parameters.AddWithValue("@BirthDate", BirthDate);
             command.Parameters.AddWithValue("@Gender", Gender);
 
-            if(Address != "")
+            if (Address != "")
                 command.Parameters.AddWithValue("@Address", Address);
             else
                 command.Parameters.AddWithValue("@Address", DBNull.Value);
@@ -103,12 +103,12 @@ namespace ClinicManagement_DataAccess
 
                 object result = command.ExecuteScalar();
 
-                if(result != null && int.TryParse(result.ToString(), out int insertedID))
+                if (result != null && int.TryParse(result.ToString(), out int insertedID))
                 {
                     PersonID = insertedID;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
 
             }
@@ -159,7 +159,7 @@ namespace ClinicManagement_DataAccess
                 connection.Open();
                 rowsAffected = command.ExecuteNonQuery();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return false;
             }
@@ -187,7 +187,7 @@ namespace ClinicManagement_DataAccess
                 connection.Open();
                 rowsAffected = command.ExecuteNonQuery();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
             }
             finally
@@ -216,7 +216,7 @@ namespace ClinicManagement_DataAccess
 
                 reader.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 isFound = false;
             }
@@ -232,7 +232,20 @@ namespace ClinicManagement_DataAccess
             DataTable dt = new DataTable();
 
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-            string query = "SELECT * FROM People";
+            string query = @"  SELECT PersonID, 
+  FirstName + ' ' + SecondName + ' ' + ISNULL(ThirdName,'') + ' ' + LastName AS FullName,
+  NationalIdentificationNumber AS NationalID, BirthDate, 
+  CASE
+  WHEN Gender = 0 THEN 'Male'
+  WHEN Gender = 1 THEN 'Female'
+  END AS Gender,
+  Phone,
+  Email,
+  CountryName 
+  FROM People
+  INNER JOIN
+  Countries ON Countries.CountryID = People.CountryID;
+";
 
             SqlCommand command = new SqlCommand(query, connection);
 
@@ -241,7 +254,7 @@ namespace ClinicManagement_DataAccess
                 connection.Open();
                 SqlDataReader reader = command.ExecuteReader();
 
-                if(reader.HasRows)
+                if (reader.HasRows)
                 {
                     dt.Load(reader);
                 }
@@ -249,7 +262,7 @@ namespace ClinicManagement_DataAccess
                 reader.Close();
             }
 
-            catch(Exception ex)
+            catch (Exception ex)
             {
 
             }

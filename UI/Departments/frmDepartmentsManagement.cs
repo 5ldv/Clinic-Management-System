@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using UI.Departments;
+using UI.Global;
 
 namespace UI
 {

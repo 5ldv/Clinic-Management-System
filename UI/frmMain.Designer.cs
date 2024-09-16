@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            this.MainPanel = new System.Windows.Forms.Panel();
-            this.btnMinimize = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
             this.SidePanel = new System.Windows.Forms.Panel();
             this.btnName = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -44,53 +41,10 @@
             this.btnDepartment = new System.Windows.Forms.Button();
             this.btnPatients = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
-            this.TopPanel = new System.Windows.Forms.Panel();
+            this.MainPanel = new System.Windows.Forms.Panel();
             this.SidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.TopPanel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // MainPanel
-            // 
-            this.MainPanel.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainPanel.Location = new System.Drawing.Point(276, 32);
-            this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.MainPanel.Size = new System.Drawing.Size(1130, 807);
-            this.MainPanel.TabIndex = 5;
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(86)))), ((int)(((byte)(127)))));
-            this.btnMinimize.FlatAppearance.BorderSize = 0;
-            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMinimize.ForeColor = System.Drawing.Color.White;
-            this.btnMinimize.Image = global::UI.Properties.Resources.Minimize;
-            this.btnMinimize.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMinimize.Location = new System.Drawing.Point(1341, 3);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(26, 26);
-            this.btnMinimize.TabIndex = 0;
-            this.btnMinimize.UseVisualStyleBackColor = false;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(86)))), ((int)(((byte)(127)))));
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Image = global::UI.Properties.Resources.Close;
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(1374, 3);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(26, 26);
-            this.btnClose.TabIndex = 0;
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // SidePanel
             // 
@@ -107,9 +61,9 @@
             this.SidePanel.Controls.Add(this.btnPatients);
             this.SidePanel.Controls.Add(this.btnUsers);
             this.SidePanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.SidePanel.Location = new System.Drawing.Point(0, 32);
+            this.SidePanel.Location = new System.Drawing.Point(0, 0);
             this.SidePanel.Name = "SidePanel";
-            this.SidePanel.Size = new System.Drawing.Size(276, 807);
+            this.SidePanel.Size = new System.Drawing.Size(276, 839);
             this.SidePanel.TabIndex = 3;
             // 
             // btnName
@@ -229,8 +183,9 @@
             this.btnEmployees.Name = "btnEmployees";
             this.btnEmployees.Size = new System.Drawing.Size(259, 71);
             this.btnEmployees.TabIndex = 0;
-            this.btnEmployees.Text = "EMPLOYEES";
+            this.btnEmployees.Text = "PEOPLE";
             this.btnEmployees.UseVisualStyleBackColor = false;
+            this.btnEmployees.Click += new System.EventHandler(this.btnEmployees_Click);
             // 
             // btnDepartment
             // 
@@ -281,16 +236,15 @@
             this.btnUsers.Text = "USERS";
             this.btnUsers.UseVisualStyleBackColor = false;
             // 
-            // TopPanel
+            // MainPanel
             // 
-            this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(86)))), ((int)(((byte)(127)))));
-            this.TopPanel.Controls.Add(this.btnMinimize);
-            this.TopPanel.Controls.Add(this.btnClose);
-            this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TopPanel.Location = new System.Drawing.Point(0, 0);
-            this.TopPanel.Name = "TopPanel";
-            this.TopPanel.Size = new System.Drawing.Size(1406, 32);
-            this.TopPanel.TabIndex = 4;
+            this.MainPanel.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainPanel.Location = new System.Drawing.Point(276, 0);
+            this.MainPanel.Name = "MainPanel";
+            this.MainPanel.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.MainPanel.Size = new System.Drawing.Size(1130, 839);
+            this.MainPanel.TabIndex = 5;
             // 
             // frmMain
             // 
@@ -299,25 +253,20 @@
             this.ClientSize = new System.Drawing.Size(1406, 839);
             this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.SidePanel);
-            this.Controls.Add(this.TopPanel);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.SidePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.TopPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel MainPanel;
         private System.Windows.Forms.Panel SidePanel;
-        private System.Windows.Forms.Panel TopPanel;
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Button btnAppointments;
         private System.Windows.Forms.Button btnMedicalRecords;
@@ -327,10 +276,9 @@
         private System.Windows.Forms.Button btnDepartment;
         private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Button btnName;
+        private System.Windows.Forms.Panel MainPanel;
     }
 }
 

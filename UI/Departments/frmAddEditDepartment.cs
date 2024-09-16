@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UI.Global;
 
 namespace UI.Departments
 {
@@ -31,6 +32,7 @@ namespace UI.Departments
         }
         private void frmAddEditDepartment_Load(object sender, EventArgs e)
         {
+
             if (enCurrentFormMode == enMode.AddMode)
             {
                 lblHeader.Text = "ADD DEPARTMENT";

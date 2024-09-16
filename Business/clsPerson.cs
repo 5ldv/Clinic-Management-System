@@ -20,7 +20,37 @@ namespace ClinicManagement_Business
         public string Phone { set; get; }
         public string Email { set; get; }
         public byte CountryID { set; get; }
+        public string GetFullName
+        {
+            get
+            {
+                string FullName = "";
 
+                FullName += FirstName + " ";
+                FullName += SecondName + " ";
+
+                if (ThirdName != "")
+                    FullName += ThirdName + " ";
+
+                FullName += LastName + " ";
+
+                return FullName;
+            }
+        }
+        public string GetTextGender
+        {
+            get
+            {
+                return Gender == false ? "Male" : "Female";
+            }
+        }
+        public string GetCountryName
+        {
+            get
+            {
+                return clsCountry.Find(CountryID).CountryName;
+            }
+        }
         public clsPerson()
         {
             this.PersonID = -1;
@@ -62,6 +92,10 @@ namespace ClinicManagement_Business
         {
             return clsPersonData.UpdatePerson(this.PersonID, this.FirstName, this.SecondName, this.ThirdName, this.LastName, this.NationalIdentificationNumber, this.BirthDate, this.Gender, this.Address, this.Phone, this.Email, this.CountryID);
         }
+        public bool Delete()
+        {
+            return clsPersonData.DeletePerson(this.PersonID);
+        }
         public static bool DeletePerson(int PersonID)
         {
             return clsPersonData.DeletePerson(PersonID);
@@ -86,17 +120,17 @@ namespace ClinicManagement_Business
 
             bool IsFound = clsPersonData.GetPersonByID(PersonID, ref FirstName, ref SecondName, ref ThirdName, ref LastName, ref NationalIdentificationNumber, ref BirthDate, ref Gender, ref Address, ref Phone, ref Email, ref CountryID);
 
-            if(IsFound)
+            if (IsFound)
                 return new clsPerson(PersonID, FirstName, SecondName, ThirdName, LastName, NationalIdentificationNumber, BirthDate, Gender, Address, Phone, Email, CountryID);
             else
                 return null;
         }
         public bool Save()
         {
-            switch(Mode)
+            switch (Mode)
             {
                 case enMode.AddNew:
-                    if(_AddNewPerson())
+                    if (_AddNewPerson())
                     {
                         Mode = enMode.Update;
                         return true;

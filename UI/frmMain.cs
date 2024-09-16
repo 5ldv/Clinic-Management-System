@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UI.Global;
+using UI.People;
 
 namespace UI
 {
@@ -18,6 +20,7 @@ namespace UI
         }
         private void LoadForm(Form frm)
         {
+
             if (MainPanel.Controls.Count > 0)
                 MainPanel.Controls.RemoveAt(0);
 
@@ -28,19 +31,27 @@ namespace UI
             MainPanel.Tag = frm;
             frm.Show();
         }
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnMinimize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
         private void btnDepartment_Click(object sender, EventArgs e)
         {
             LoadForm(new frmDepartmentsManagement());
+        }
+        private void btnEmployees_Click(object sender, EventArgs e)
+        {
+            LoadForm(new frmPeopleManagement());
+        }
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClose_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void btnMinimize_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+
         }
     }
 }
