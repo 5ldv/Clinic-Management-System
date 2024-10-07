@@ -28,6 +28,7 @@ namespace UI.People
                 dgvPeople.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 dgvPeople.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
+            lblPeopleCount.Text = dgvPeople.Rows.Count.ToString();
         }
         private void frmPeopleManagement_Load(object sender, EventArgs e)
         {

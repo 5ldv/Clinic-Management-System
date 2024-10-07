@@ -32,7 +32,7 @@
             this.btnAddPerson = new System.Windows.Forms.Button();
             this.btnUpdatePerson = new System.Windows.Forms.Button();
             this.btnDeletePerson = new System.Windows.Forms.Button();
-            this.lblDepartmentsCount = new System.Windows.Forms.Label();
+            this.lblPeopleCount = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnPersonInfo = new System.Windows.Forms.Button();
@@ -104,16 +104,16 @@
             this.btnDeletePerson.UseVisualStyleBackColor = false;
             this.btnDeletePerson.Click += new System.EventHandler(this.btnDeletePerson_Click);
             // 
-            // lblDepartmentsCount
+            // lblPeopleCount
             // 
-            this.lblDepartmentsCount.AutoSize = true;
-            this.lblDepartmentsCount.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDepartmentsCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(86)))), ((int)(((byte)(127)))));
-            this.lblDepartmentsCount.Location = new System.Drawing.Point(366, 755);
-            this.lblDepartmentsCount.Name = "lblDepartmentsCount";
-            this.lblDepartmentsCount.Size = new System.Drawing.Size(69, 40);
-            this.lblDepartmentsCount.TabIndex = 4;
-            this.lblDepartmentsCount.Text = "N/A";
+            this.lblPeopleCount.AutoSize = true;
+            this.lblPeopleCount.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPeopleCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(86)))), ((int)(((byte)(127)))));
+            this.lblPeopleCount.Location = new System.Drawing.Point(187, 755);
+            this.lblPeopleCount.Name = "lblPeopleCount";
+            this.lblPeopleCount.Size = new System.Drawing.Size(69, 40);
+            this.lblPeopleCount.TabIndex = 4;
+            this.lblPeopleCount.Text = "N/A";
             // 
             // label2
             // 
@@ -122,9 +122,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(86)))), ((int)(((byte)(127)))));
             this.label2.Location = new System.Drawing.Point(69, 755);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(303, 40);
+            this.label2.Size = new System.Drawing.Size(121, 40);
             this.label2.TabIndex = 5;
-            this.label2.Text = "TOTAL DEPARTMENTS:";
+            this.label2.Text = "PEOPLE:";
             // 
             // label1
             // 
@@ -165,7 +165,7 @@
             this.Controls.Add(this.btnUpdatePerson);
             this.Controls.Add(this.btnPersonInfo);
             this.Controls.Add(this.btnDeletePerson);
-            this.Controls.Add(this.lblDepartmentsCount);
+            this.Controls.Add(this.lblPeopleCount);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -187,7 +187,7 @@
         private System.Windows.Forms.Button btnAddPerson;
         private System.Windows.Forms.Button btnUpdatePerson;
         private System.Windows.Forms.Button btnDeletePerson;
-        private System.Windows.Forms.Label lblDepartmentsCount;
+        private System.Windows.Forms.Label lblPeopleCount;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnPersonInfo;
